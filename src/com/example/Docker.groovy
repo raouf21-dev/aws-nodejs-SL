@@ -12,6 +12,7 @@ class Docker implements Serializable {
     def buildDockerImage(String imageName){
         script.echo "building the docker image..."
         script.sh "docker build --platform linux/amd64 -t $imageName ." 
+        script.echo "Listing Docker images..."
+        script.sh "docker images | grep $imageName || true" 
     }
-    
 }
