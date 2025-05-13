@@ -8,6 +8,4 @@ class Docker implements Serializable {
     Docker(script){
         this.script = script
     }
-
-    
 }
